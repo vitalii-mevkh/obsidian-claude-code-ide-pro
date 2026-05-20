@@ -19,7 +19,10 @@ import { registerStubTools } from "./handlers/stubs";
 import { registerDiffTools } from "./handlers/diff";
 import { registerObsidianTools } from "./handlers/obsidian-tools";
 import { DIFF_VIEW_TYPE, DiffView } from "./views/diff-view";
-import { SelectionNotifier } from "./notifier";
+// SelectionNotifier is intentionally NOT wired up in v0.1.0 — the push
+// surfaced selections at unwanted moments and added noise. Source kept
+// in src/notifier.ts for future re-enable.
+// import { SelectionNotifier } from "./notifier";
 import {
   ClaudeCodeIdeSettings,
   ClaudeCodeIdeSettingTab,
@@ -31,7 +34,6 @@ export default class ClaudeCodeIdePlugin extends Plugin {
   private server?: IdeWsServer;
   private lockfile?: LockfileManager;
   private statusBar?: StatusBar;
-  private notifier?: SelectionNotifier;
   private authToken = "";
   private vaultRoot = "";
 
@@ -85,7 +87,6 @@ export default class ClaudeCodeIdePlugin extends Plugin {
         const port = this.server?.getPort() ?? 0;
         const n = this.server?.clientCount() ?? 0;
         this.statusBar?.setConnected(port, n);
-        this.notifier?.flushNow();
       },
       onDisconnect: () => {
         const port = this.server?.getPort() ?? 0;
@@ -104,13 +105,9 @@ export default class ClaudeCodeIdePlugin extends Plugin {
       this.statusBar?.setOff();
       return;
     }
-
-    this.notifier = new SelectionNotifier(this, this.server, ctx);
-    this.notifier.install();
   }
 
   async onunload(): Promise<void> {
-    this.notifier?.uninstall();
     try {
       this.lockfile?.cleanup();
     } catch (err) {

@@ -73,8 +73,6 @@ Now Claude can see your active note, your tabs, and your selection; can open fil
 | `getDiagnostics` | Returns `[]` (Obsidian has no LSP) |
 | `executeCode` | Soft failure (no Jupyter) |
 
-Plus a push notification: **`selection_changed`** fires (debounced 150 ms) on tab switch, file open, and CodeMirror selection updates.
-
 ### Obsidian-native MCP tools
 
 | Tool | What it does |
@@ -188,9 +186,9 @@ node scripts/smoke-diff.mjs
 # Obsidian-native tools — backlinks, wikilinks, search, frontmatter, ...
 node scripts/smoke-obsidian-tools.mjs
 
-# Tail selection_changed pushes for 30s — interact with Obsidian to see them
-node scripts/listen-notifications.mjs 30
 ```
+
+*(`scripts/listen-notifications.mjs` exists for the deferred `selection_changed` notification — currently a no-op since the push isn't wired in v0.1.0.)*
 
 ---
 
@@ -206,7 +204,7 @@ src/
 ├── tools-registry.ts      # name → {description, schema, handler}
 ├── mcp-handshake.ts       # initialize / tools/list / tools/call / notifications
 ├── obsidian-context.ts    # App + cached selection + path resolution
-├── notifier.ts            # selection_changed pusher (CM6 update listener, debounced)
+├── notifier.ts            # selection_changed pusher (present but not wired in v0.1.0)
 ├── settings.ts            # PluginSettingTab + persisted config
 ├── handlers/
 │   ├── editors.ts         # getOpenEditors, getCurrentSelection, ...
