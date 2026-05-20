@@ -1,8 +1,8 @@
 {
-  "name": "obsidian-claude-code-ide",
+  "name": "obsidian-claude-code-ide-pro",
   "version": "0.1.0",
   "private": true,
-  "description": "Obsidian plugin that hosts the Claude Code IDE WebSocket MCP server so Claude is aware of your vault.",
+  "description": "Obsidian plugin that hosts the Claude Code IDE WebSocket MCP server in full — diff approval, vault-graph MCP tools, no terminal double-prompt.",
   "scripts": {
     "dev": "node esbuild.config.mjs",
     "build": "node esbuild.config.mjs production",
