@@ -10,7 +10,7 @@ Unlike a minimal context bridge, every standard IDE tool is wired up: Claude can
 
 When you launch `claude` from inside your vault and type `/ide`, Claude connects to Obsidian and gets eyes on everything you're working on. No more copy-pasting paragraphs into the terminal.
 
-Made during my experiments with my fiction universe lore wiki for [Transept.ai](http://Transept.ai) and WritingTool RAG features. Inspired by [llm-wiki.](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 
+Made by [Transept](https://transept.ai) — a workshop building AI tools for translators, writers, and localization teams. This plugin started as internal tooling for a fiction-universe lore wiki and WritingTool RAG experiments. Inspired by Karpathy's [llm-wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
 *Looking for a minimal read-only context bridge instead? See [petersolopov/obsidian-claude-ide](https://github.com/petersolopov/obsidian-claude-ide) — same protocol, deliberately smaller scope.*
 
@@ -30,13 +30,13 @@ Made during my experiments with my fiction universe lore wiki for [Transept.ai](
 
 ### Manually (current)
 
-1. Download `manifest.json`, `main.js`, and `styles.css` from the [latest GitHub release](https://github.com/vitalii-mevkh/obsidian-claude-code-ide-pro/releases).
+1. Download `manifest.json`, `main.js`, and `styles.css` from the [latest GitHub release](https://github.com/Transept-AI/obsidian-claude-code-ide-pro/releases).
 2. Place them under `<your-vault>/.obsidian/plugins/claude-code-ide-pro/`.
 3. In Obsidian → Settings → Community Plugins → enable **Claude Code IDE Pro**.
 
 ### Via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 
-Add `vitalii-mevkh/obsidian-claude-code-ide-pro` as a beta plugin in BRAT, then enable it.
+Add `Transept-AI/obsidian-claude-code-ide-pro` as a beta plugin in BRAT, then enable it.
 
 ---
 
@@ -197,7 +197,7 @@ Protocol reverse-engineering credit:
 ## Building from source
 
 ```bash
-git clone https://github.com/vitalii-mevkh/obsidian-claude-code-ide-pro.git
+git clone https://github.com/Transept-AI/obsidian-claude-code-ide-pro.git
 cd obsidian-claude-code-ide-pro
 npm install
 npm run build       # one-shot production build → main.js
