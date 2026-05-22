@@ -26,6 +26,14 @@ Made by [Transept](https://transept.ai) — a workshop building AI tools for tra
 - **Claude speaks Obsidian, not just files.** Eight built-in MCP tools expose your vault graph — backlinks, wikilink resolution, frontmatter, search, daily notes, and more. Ask "what links to [[Anna]]?" and Claude gets an answer that respects how Obsidian models links.
 - **Same protocol as VS Code and JetBrains.** Not a wrapper. The actual Claude Code IDE integration contract, implemented for Obsidian.
 
+## See it in action
+
+<p align="center">
+  <img src="./assets/diff-view.png" alt="Claude Code IDE Pro in action — side-by-side diff view inside Obsidian with the Claude pane on the right" />
+</p>
+
+A Claude pane runs in the right sidebar (any terminal plugin works as the host). When Claude proposes an edit, it appears as a side-by-side diff in the main pane with **Accept** / **Reject** buttons. No terminal `y/n` prompt, no copy-paste — review, click, done. The status bar at the bottom-right shows `● Claude IDE: connected · N clients` so you know the bridge is live.
+
 ## Installation
 
 ### From the Community Plugins directory
