@@ -1,9 +1,9 @@
 {
   "id": "claude-code-ide-pro",
   "name": "Claude Code IDE Pro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.4.11",
-  "description": "Host the Claude Code IDE integration protocol inside Obsidian. Claude sees the active note, tabs, and selection, opens files, and proposes edits through a side-by-side diff view.",
+  "description": "Host the Claude Code IDE integration protocol. Claude sees the active note, tabs, and selection, opens files, and proposes edits through a side-by-side diff view with one-click Accept or Reject.",
   "author": "Vitaly Vlasyuk (mevkh)",
   "authorUrl": "https://github.com/vitalii-mevkh",
   "isDesktopOnly": true

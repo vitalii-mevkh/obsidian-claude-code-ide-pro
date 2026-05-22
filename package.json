@@ -1,6 +1,6 @@
 {
   "name": "obsidian-claude-code-ide-pro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Obsidian plugin that hosts the Claude Code IDE WebSocket MCP server in full — diff approval, vault-graph MCP tools, no terminal double-prompt.",
   "scripts": {
